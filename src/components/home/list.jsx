@@ -135,7 +135,7 @@ const List = () => {
                   position="absolute"
                   bottom={0}
                 >
-                  <Button bg={'black'} color={'whiteAlpha.600'}  onClick={()=>window.open(`${event.form}`,"_blank")}>Register</Button>
+                  <Button bg={'green.500'} color={'whiteAlpha.600'}  onClick={()=>window.open(`${event.form}`,"_blank")}>Register</Button>
                 
                 </Box>
               </VStack>
