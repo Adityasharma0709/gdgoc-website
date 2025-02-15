@@ -29,16 +29,14 @@ function App() {
           <Routes>
             {/* Home routes */}
             <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/events" element={ <PrivateRoute>
+            <Route exact path="/events" element={ 
                 <Event />
-              </PrivateRoute>}/>
+             }/>
             <Route exact path="/suggested" element={<SuggestedArticles />} />
             <Route path="/event/:id" element={<EventPage />} /> 
             <Route exact path="/write" element={
-              <PrivateRoute>
                 <WriteArticle />
-              </PrivateRoute>
-            } />
+            }/>
 
             <Route exact path="/my-articles" element={
               <PrivateRoute>

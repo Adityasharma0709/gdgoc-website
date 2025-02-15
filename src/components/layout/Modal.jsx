@@ -77,7 +77,7 @@ const SimpleModal = ({open,setIsOpen}) => {
 
 					<ModalFooter justifyContent="center">
 						<Button colorScheme="red" mr={3} onClick={closeModal}>
-							Close
+							Go To Main Page
 						</Button>
 						<Button colorScheme="blue" onClick={() => navigate("/events")}>
 							Check Out Summit

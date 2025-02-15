@@ -42,7 +42,7 @@ const List = () => {
 
   return (
     <Box
-      pt={100}
+      pt={10}
       w="100vw"
       minH="100vh"
       display="flex"
@@ -50,13 +50,13 @@ const List = () => {
       alignItems="center"
       justifyContent="flex-start"
       position="relative"
-      bg='#983cb9'
-      bgImage="linear-gradient(147deg, #5b1f80 0%, #000000 74%)"
+      bg='rgb(0,0,128)'
+      bgGradient={'linear-gradient(159deg, rgba(0,0,128,1) 0%, rgba(0,191,255,1) 100%)'}
       color={colorMode === "light" ? "black" : "white"}
       overflowY="auto"
       overflowX={'hidden'}
     >
-      <Heading fontSize={['5xl', '10xl']} mt={5} color={'whiteAlpha.700'}>EVENTS</Heading>
+      <Heading fontSize={['5xl', '10xl']} color={'whiteAlpha.700'}>EVENTS</Heading>
       <Box
         position="absolute"
         top="0"
@@ -70,91 +70,79 @@ const List = () => {
         filter="blur(10px)"
       />
 
-<SimpleGrid
-  columns={{ base: 1, md: 2, lg: 3 }} 
-  spacing={6}
- 
-  pl={{ base: "20%", md: 6 }} 
-  pr={{ base: "20%", md: 6 }} 
-  pt={{ base: 8, md: 12 }} 
-  pb={{ base: 8, md: 12 }} 
-  w="100%"
-  maxW="1200px"
-  mx="auto" 
-  align="center"
-  justify="center"
-  gap={{ base: 6, md: 8 }} 
->
-  <AnimatePresence mode="wait">
-    {currentEvents.map((event) => (
-      <motion.div
-        key={event.id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-        }}
-        style={{ position: "relative", zIndex: 1 }}
+      <SimpleGrid
+        columns={{ base: 1, sm: 2, md: 3 }}
+        spacing={6}
+        pl={{ base: '10%', md: 6 }}
+
+        pt={{ base: 8, md: 12 }}
+        pb={{ base: 8, md: 12 }}
+        w="100%"
+        maxW="1200px"
+        mx="auto"
+        align="center"
+        justify="center"
+        gap={{ base: 6, md: 8 }}
       >
-        <VStack
-          spacing={4}
-          p={4}
-          borderWidth="1px"
-          borderRadius="lg"
-          boxShadow="2xl"
-          align="center"
-          w={{ base: "280px", md: "320px", lg: "360px" }} 
-          h={{ base: "280px", md: "320px", lg: "360px" }} 
-          position="relative"
-          overflow="hidden"
-        >
-          {/* Event Image */}
-          <Image
-            src={`${event.photo}`}
-            alt={event.name}
-            h="100%"
-            w="100%"
-            objectFit="cover"
-            position="absolute"
-            top={0}
-            left={0}
-            zIndex={0}
-          />
-
-          <Box
-             display="flex"
-             flexDirection="column"
-             justifyContent="flex-end"
-             alignItems="center"
-             w="100%"
-             h="40%"
-             p={4}
-             borderRadius="md"
-             zIndex={1}
-             position="absolute"
-             bottom={0}
-          >
-
-            <Button
-              rounded="full"
-              bg="green.500"
-              p={3}
-              onClick={() => navigate(`/event/${event.id}`)}
-              alignSelf="center"
-              zIndex={2}
-              _hover={{ bg: "green.600" }} 
-              size={{ base: "sm", md: "md" }} 
+        <AnimatePresence mode="wait">
+          {currentEvents.map((event) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+              }}
+              style={{ position: "relative", zIndex: 1 }}
             >
-              Register
-            </Button>
-          </Box>
-        </VStack>
-      </motion.div>
-    ))}
-  </AnimatePresence>
-</SimpleGrid>
+              <VStack
+                spacing={4}
+                p={4}
+                borderWidth="1px"
+                borderRadius="lg"
+                boxShadow="2xl"
+                align="center"
+                w={{ base: "280px", md: "320px", lg: "360px" }}
+                h={{ base: "280px", md: "320px", lg: "360px" }}
+                position="relative"
+                overflow="hidden"
+              >
+                <Image
+                  src={`${event.photo}`}
+                  alt={event.name}
+                  h="100%"
+                  w="100%"
+                  objectFit="cover"
+                  position="absolute"
+                  top={0}
+                  left={0}
+                  zIndex={0}
+                  onClick={()=>window.open(`${event.form}`,"_blank")}
+                />
+
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="flex-end"
+                  alignItems="center"
+                  w="100%"
+                  h="40%"
+                  p={4}
+                  borderRadius="md"
+                  zIndex={1}
+                  position="absolute"
+                  bottom={0}
+                >
+
+                
+                </Box>
+              </VStack>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </SimpleGrid>
 
       <Button
         position="absolute"
@@ -165,7 +153,7 @@ const List = () => {
         zIndex={20}
         _hover={{ bg: "gray.800" }}
         _active={{ bg: "gray.900" }}
-        bg="white"
+        bg="transparent"
         color="black"
       >
         <ChevronLeftIcon />
@@ -179,7 +167,7 @@ const List = () => {
         zIndex={20}
         _hover={{ bg: "gray.800" }}
         _active={{ bg: "gray.900" }}
-        bg="white"
+        bg="transparent"
         color="black"
       >
         <ChevronRightIcon />

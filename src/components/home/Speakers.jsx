@@ -1,6 +1,6 @@
 import { Box, Image, Text, VStack, SimpleGrid, Heading, Button } from '@chakra-ui/react';
 import React from 'react';
-import { redirect, useNavigate } from 'react-router-dom';
+
 const speakers = [
   {
     photo: "/sp1.jpg",
@@ -16,20 +16,17 @@ const speakers = [
   }
 ];
 
-
-
 const Speakers = () => {
-  
   return (
     <Box
-      width="100%"
+      width="100vw"
       maxW="1200px"
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
       textAlign="center"
-     mb={10}
+      mb={2}
     >
       <Heading
         fontFamily="sans-serif"
@@ -44,41 +41,44 @@ const Speakers = () => {
         spacing="60"
         width="100%"
         justifyItems="center"
-        ml={["0","50%"]}
+        ml={["0", "50%"]}
         gap={10}
       >
         {speakers.map((member, index) => (
           <VStack
             key={index}
             spacing="4"
-            p="6"
+           
             borderWidth="1px"
             borderRadius="lg"
             boxShadow="md"
             align="center"
             justify="center"
             width="100%"
-            maxW="300px"
+            maxW="300px" // Set a max width
+            height="300px" // Set the height for square shape
             bg="white"
-            aspectRatio={1}
+            position="relative" // Ensure image is contained within the card
           >
             <Image
               width="100%"
-              height="auto"
-              objectFit="cover"
+              height="100%" // Ensure the image takes the full square card
+              objectFit="full" // Image should fill the card proportionally
               borderRadius="lg"
               src={member.photo}
               alt={member.name}
+              onClick={() => window.open(`${member.register}`, "_blank")}
             />
-            <Text fontWeight="bold" fontSize={['md', 'lg']}>
-              {member.name}
-            </Text>
-            <Text color="gray.600" textAlign="center">
-              {member.role}
-            </Text>
-            <Button onClick={()=>window.open(`${member.register}`,"_blank")} bg={'green.500'} rounded={'full'} p={3}>
-              Register
-            </Button>
+            <Box
+              position="absolute"
+              bottom="20px"
+              left="50%"
+              transform="translateX(-50%)"
+              width="80%" // Adjust button position and size
+              textAlign="center"
+            >
+            
+            </Box>
           </VStack>
         ))}
       </SimpleGrid>

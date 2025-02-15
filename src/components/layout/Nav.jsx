@@ -18,7 +18,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 import { useThemeContext } from "../../contexts/themecontext";
 
-const img = "/image.png"
+const img = "/logo.png"
 
 function Nav({hidden}) {
   
@@ -54,9 +54,8 @@ function Nav({hidden}) {
     color={"blue.500"} zIndex={1000}>
       <Flex justify="center" align="center">
         <Link to="/">
-          <Image src={img} width="150px" height="90px" />
+          <Image src={img} width="100px" height="70px" />
         </Link>
-
 
         <Spacer />
 

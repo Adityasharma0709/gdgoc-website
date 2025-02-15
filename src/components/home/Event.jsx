@@ -30,17 +30,14 @@ const Event = () => {
       alignItems="center"
       textAlign="center"
       px={[4, 6, 10]}
-      bgImage={"url('https://gdsc.iiitd.edu.in/static/media/lower_yellow_square.bdeae0bc6d849480de1edb3fe12c1660.svg')"}
+     
       bgSize="cover"
       bg={'black'}
       bgPosition="center"
       overflowX={'hidden'}
     >
-      {/* Render Nav unconditionally */}
-    
 
       <AnimatePresence mode="sync">
-       
           <motion.div
             key="list"
             initial={{ opacity: 0, scale: 0.8 }}
