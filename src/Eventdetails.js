@@ -1,7 +1,7 @@
 export const events = [
   {
     id:1,
-    photo: "/2.jpg",
+    photo: "/2.png",
     name: "TechSynopsis",
     timing: "10:15 AM - 1:30 PM",
     description: "Participants will be given a real-world problem statement and will need to create a Software Requirements Specification (SRS) document based on it. This event is designed to test analytical thinking, problem breakdown, and documentation skills essential for software development. Teams will be judged on clarity, completeness, and feasibility of their SRS.",
@@ -14,7 +14,7 @@ export const events = [
   },
   {
     id:2,
-    photo: "/6.jpg",
+    photo: "/6.png",
     name: "Reincarnate",
     timing: "10:15 AM - 1:30 PM",
     description: "Teams of two will be provided with a sample website that they must redesign using Figma. The challenge focuses on UI/UX design, prototyping, and creativity. Teams will be judged on design aesthetics, responsiveness, and adherence to modern UI/UX principles.",
@@ -27,7 +27,7 @@ export const events = [
   },
   {
     id:4,
-    photo: "/10.jpg",
+    photo: "/10.png",
     name: "Web Hunt",
     timing: "10:15 AM - 1:30 PM",
     description:
@@ -41,7 +41,7 @@ export const events = [
   },
   {
     id:5,
-    photo: "/4.jpg",
+    photo: "/4.png",
     name: "Escape Room",
     timing: "10:15 AM - 1:30 PM",
     description: "Teams of three will face a series of logic-based challenges and must solve them within 10 minutes per challenge to 'escape the room.' Challenges will include 1. Solving a Sudoku puzzle 2. Solving a Data Structures and Algorithms (DSA) problem 3. Solving the Tower of Hanoi puzzle 4. Answering an output-based programming question 5. Cracking a password",
@@ -54,7 +54,7 @@ export const events = [
   },
   {
     id:6,
-    photo: "/8.jpg",
+    photo: "/8.png",
     name: "Data Crunch",
     timing: "10:15 AM - 1:30 PM",
     description: "Data Crunch is a multi-level process that begins with data preprocessing, where outliers are detected and removed to enhance data quality . This is followed by data analysis and visualization. The final stage involves comprehensive data analysis, focusing on an in-depth examination of the dataset to derive meaningful findings, insights, and implications.",
