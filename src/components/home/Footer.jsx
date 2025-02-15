@@ -16,6 +16,7 @@ const Footer = () => {
            <FiInstagram/>
           </Link>
         </Stack>
+        
       </Flex>
     </Box>
   );

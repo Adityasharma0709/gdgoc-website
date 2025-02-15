@@ -119,7 +119,7 @@ const List = () => {
                   top={0}
                   left={0}
                   zIndex={0}
-                  onClick={()=>window.open(`${event.form}`,"_blank")}
+                 
                 />
 
                 <Box
@@ -135,7 +135,7 @@ const List = () => {
                   position="absolute"
                   bottom={0}
                 >
-
+                  <Button bg={'black'} color={'whiteAlpha.600'}  onClick={()=>window.open(`${event.form}`,"_blank")}>Register</Button>
                 
                 </Box>
               </VStack>
